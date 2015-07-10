@@ -1,8 +1,7 @@
 
 var diripc= 'http://192.168.3.103:8080/';
-var diripl= 'http://192.168.1.91:8080/';
-
-var url =diripc+'taxi/v1/index.php/comentarios/';
+var diripl= 'http://192.168.0.6:8080/';
+var url =diripl+'taxi/v1/index.php/comentarios/';
 
 function doGet(e) {
 	
@@ -38,7 +37,7 @@ function doGetId(e) {
 		alert(this.responseText);
 	};
 	
-	var urlget= url+$.txtid.getValue();
+	var urlget= url+$.txtId.getValue();
 	
 	// Send the request data.
 	anXhr.open('GET',urlget);
@@ -91,7 +90,7 @@ function doPut(e) {
 		alert(this.responseText);
 		console.log(this.responseText);
 	};
-	var urlput=url+$.txtid.getValue();
+	var urlput=url+$.txtId.getValue();
 	
 	// Send the request data.
 	anXhr.open('PUT',urlput);
@@ -114,7 +113,7 @@ function doDelete(e) {
 	anXhr.onerror = function() {
 		alert(this.responseText);
 	};
-	var urldel = url + $.txtid.getValue();
+	var urldel = url + $.txtId.getValue();
 	
 	// Send the request data.
 	anXhr.open('DELETE',urldel);
