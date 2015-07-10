@@ -9,37 +9,50 @@
 	
 },
 
-"#button":{
+"#btnGet":{
 	backgroundColor:"gray"
 },
 
-"#button1":{
+"#btnGetId":{
 	backgroundColor:"red"
 },
 
-"#button2":{
+"#btnPost":{
 	backgroundColor:"#0B173B"
 },
 
-"#button3":{
+"#btnPut":{
 	backgroundColor:"silver"
 },
 
-"#button4":{
-	backgroundColor:"purple"
-},
-
-"#button4":{
+"#btnDel":{
 	backgroundColor:"#088A08"
 },
 
-'#txtid':{
+'#txtId':{
 	backgroundColor:'white',
-	width:'40%',
-	height:'25dp',
-	color:'black'
+	width:'50%',
+	height:'40dp',
+	color:'black',
+	textAlign:'bottom'
 }
 "#separator":{
 	height: "10%",
 	width: Titanium.UI.FILL
+}
+
+"#separator1":{
+	height: Titanium.UI.SIZE,
+	width: '15%'
+}
+
+"#separator2":{
+	height: Titanium.UI.SIZE,
+	width: '35%'
+}
+
+"#viewGet":{
+	layout:'horizontal',
+	height:Titanium.UI.SIZE,
+	width:Titanium.UI.FILL
 }

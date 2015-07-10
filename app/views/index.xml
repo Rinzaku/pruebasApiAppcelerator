@@ -1,14 +1,19 @@
 <Alloy>
 	<Window class="container">
-		<Button id="button" onClick="doClick"> GET </Button>
+		<TextField id="txtId"></TextField>
 		<View id="separator"></View>
-		<Button id="button6" onClick="doClick6"> GET ID </Button>
-		<TextField id="txtid"></TextField>
+		<View id="viewGet">
+			<View id="separator1"></View>
+			<Button id="btnGet" onClick="doGet"> GET </Button>
+			<View id="separator2"></View>
+			<Button id="btnGetId" onClick="doGetId"> GET ID </Button>
+			<View id="separator1"></View>
+		</View>
 		<View id="separator"></View>
-		<Button id="button1" onClick="doClick1"> POST </Button>
+		<Button id="btnPost" onClick="doPost"> POST </Button>
 		<View id="separator"></View>
-		<Button id="button2" onClick="doClick2"> PUT </Button>
+		<Button id="btnPut" onClick="doPut"> PUT </Button>
 		<View id="separator"></View>
-		<Button id="button4" onClick="doClick4"> DELETE </Button>
+		<Button id="btnDel" onClick="doDelete"> DELETE </Button>
 	</Window>
 </Alloy>
