@@ -1,0 +1,45 @@
+".container": {
+	backgroundColor:"#121212",
+	layout:'vertical'
+},
+
+"Button" :{
+	width:Titanium.UI.SIZE,
+	height: "12%",
+	
+},
+
+"#button":{
+	backgroundColor:"gray"
+},
+
+"#button1":{
+	backgroundColor:"red"
+},
+
+"#button2":{
+	backgroundColor:"#0B173B"
+},
+
+"#button3":{
+	backgroundColor:"silver"
+},
+
+"#button4":{
+	backgroundColor:"purple"
+},
+
+"#button4":{
+	backgroundColor:"#088A08"
+},
+
+'#txtid':{
+	backgroundColor:'white',
+	width:'40%',
+	height:'25dp',
+	color:'black'
+}
+"#separator":{
+	height: "10%",
+	width: Titanium.UI.FILL
+}
