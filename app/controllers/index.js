@@ -1,7 +1,25 @@
 
-var diripc= 'http://192.168.3.103:8080/';
+var diripc= 'http://192.168.3.100:8080/';
 var diripl= 'http://192.168.0.6:8080/';
-var url =diripl+'taxi/v1/index.php/comentarios/';
+
+var comentarios = 'comentarios/';
+var viajes = 'viajes/';
+
+var viaje ={
+	id_taxi: 2,
+	id_estatus_viaje:4,
+	id_taxista:0,
+	ident_dispositivo:'',
+	lat_origen:'',
+	long_origen:'',
+	lat_destino:'',
+	long_destino:'',
+	calificacion:0,
+	nivel_confianza:0,
+	fecha:'2015-07-13 11:34:00.878'
+};
+
+var url =diripl+'taxi/v1/'+viajes;
 
 function doGet(e) {
 	
@@ -46,13 +64,10 @@ function doGetId(e) {
 }
 
 function doPost(e) {
-	
+	llenaViaje();
 	// Create an HTTPClient.
 	var anXhr = Ti.Network.createHTTPClient();
-	var comentario = {
-				id_viaje: 500,
-				comentario: "prueba post comentario desde iphone"
-		};
+	
 	
 	anXhr.setTimeout(10000);
 	
@@ -66,7 +81,7 @@ function doPost(e) {
 	
 	// Send the request data.
 	anXhr.open('POST',url);
-	anXhr.send(comentario);
+	anXhr.send(viaje);
 	
 }
 
@@ -91,10 +106,10 @@ function doPut(e) {
 		console.log(this.responseText);
 	};
 	var urlput=url+$.txtId.getValue();
-	
+	console.log(urlput);
 	// Send the request data.
 	anXhr.open('PUT',urlput);
-	anXhr.send(comentario);
+	anXhr.send(viaje);
 	
 }
 
@@ -121,5 +136,13 @@ function doDelete(e) {
 	
 }
 
+function llenaViaje(){
+	viaje.id_taxi=Math.floor((Math.random()*100)+1);
+	viaje.id_estatus_viaje=Math.floor((Math.random()*4)+1);
+	viaje.id_taxista=Math.floor((Math.random()*100)+1);
+	viaje.ident_dispositivo='123456'+Math.floor(Math.random()*100);
+	viaje.calificacion=Math.floor((Math.random()*10)+1);
+	viaje.nivel_confianza=Math.floor((Math.random()*10)+1);
+}
 
 $.index.open();
